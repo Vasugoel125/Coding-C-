@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct student
+{
+	int roll_no;
+	string Name;
+	string Address;
+};
+int main()
+{
+	struct student s;
+	cin>>s.roll_no;
+	cin>>s.Name;
+	cin>>s.Address;
+	cout<<s.roll_no<<" "<<s.Name<<" "<<s.Address;
+	return 0;
+}
