@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+void f1() throw(int)
+{
+	cout<<"function f1 begins\n";
+	throw 100;
+	cout<<"function f1 ends\n";
+}
+void f2() throw(int)
+{
+	cout<<"function f2 begins\n";
+	f1();
+	cout<<"function f2 ends\n";
+}
+int main()
+{
+	try
+	{
+		f2();
+	}
+	catch(int i)
+	{
+		cout<<"inside catch function\n";
+	}
+	cout<<"Bye....";
+	return 0;
+}
