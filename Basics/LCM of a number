@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	cin>>a>>b;
+	int start = max(a,b);
+	int end = a*b;
+	int ans = end;
+	for(int i=start;i<=end;i++)
+	{
+		if(a%i==0 and b%i==0)
+		{
+			ans = i;
+			break;
+		}
+	}
+	cout<<ans;
+	return 0;
+}
