@@ -6,7 +6,7 @@ int main()
 	cin>>a>>b;
 	int start = max(a,b);
 	int end = a*b;
-	int ans = end;
+	int ans = start;
 	for(int i=start;i<=end;i++)
 	{
 		if(a%i==0 and b%i==0)
