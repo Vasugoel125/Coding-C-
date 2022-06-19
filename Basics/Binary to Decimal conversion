@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	int last_number;
+	int result=0;
+	int base = 1;
+	while(n!=0)
+	{
+		last_number = n%10;
+		result = result + (last_number*base); 
+		n = n/10;
+		base = base * 2;
+	}
+	cout<<result;
+	return 0;
+}
