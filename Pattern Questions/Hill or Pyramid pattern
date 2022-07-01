@@ -1,3 +1,11 @@
+1. Decreasing Space   2. Increasing Star     3. Increasing Star 
+
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
