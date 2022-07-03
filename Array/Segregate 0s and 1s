@@ -1,0 +1,73 @@
+Method 1:- Count 0s and 1s
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {0,0,0,1,0,1,1,1,0,1,0,1,1,1,0,1,0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout<<n<<endl;
+    int count = 0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i] == 0)
+        {
+            count++;
+        }
+    }
+    for(int i=0;i<count;i++)
+    {
+        arr[i] = 0;
+    }
+    for(int i=count;i<n;i++)
+    {
+        arr[i] = 1;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+Method 2:- Use two index traversal 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {0,1,0,1,0,1,0,1,0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout<<n<<endl;
+    int left = 0,right = n-1;
+    while(left<right)
+    {
+        while(arr[left] == 0 && left<right)
+        {
+            left++;
+        }
+        while(arr[right] == 1 && left<right)
+        {
+            right--;
+        }
+        if(left<right)
+        {
+            arr[left] = 0;
+            arr[right] = 1;
+            left++;
+            right--;
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
