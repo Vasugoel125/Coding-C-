@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+string reversestring(string str)
+{
+    int n = str.length();
+    int temp,start=0,end=n-1;
+    for(int i=0;i<n/2;i++)
+    {
+        temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        start++;
+        end--;
+    }
+    return str;
+}
+int main()
+{
+    string str;
+    cin>>str;
+    cout<<reversestring(str);
+    return 0;
+}
