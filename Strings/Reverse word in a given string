@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str,str2="",str3="";
+    getline(cin,str);
+    int n = str.length();
+    for(int i=0;i<n;i++)
+    {
+        str2 += str[i];
+        if(str[i] == ' ')
+        {
+            reverse(str2.begin(),str2.end());
+            str3 = str3 + str2;
+            str2 = "";
+        }
+        else if(i==n-1)
+        {
+            reverse(str2.begin(),str2.end());
+            str3+= " ";
+            str3+= str2;
+        }
+    }
+    cout<<str3;
+    return 0;
+}
